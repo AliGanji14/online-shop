@@ -111,6 +111,13 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'aliganji1309@gmail.com'
+EMAIL_HOST_PASSWORD = 'cctu ardw ygll pwcb'
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -136,8 +143,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # crispy forms settings
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
