@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from django.contrib.messages import constants as messages
 
 load_dotenv()
 
@@ -170,3 +171,8 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
+
+# For messages framework
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}

@@ -1,6 +1,5 @@
-from itertools import product
-
 from django.shortcuts import render, get_object_or_404, redirect
+from django.views.decorators.http import require_POST, require_GET
 
 from products.models import Product
 from .cart import Cart
@@ -20,6 +19,7 @@ def cart_detail_view(request):
     })
 
 
+@require_POST
 def add_to_cart_view(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
@@ -33,6 +33,7 @@ def add_to_cart_view(request, product_id):
     return redirect('cart:cart_detail')
 
 
+@require_GET
 def remove_from_cart_view(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
