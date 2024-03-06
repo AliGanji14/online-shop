@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-05 19:44+0330\n"
-"PO-Revision-Date: 2024-03-05 19:46+0330\n"
+"PO-Revision-Date: 2024-03-05 22:17+0330\n"
 "Last-Translator:   <ali@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "حساب کاربری"
 
 #: .\_base.html:99
 msgid "login"
-msgstr "ورود"
+msgstr "ورود کنید"
 
 #: .\_base.html:102
 msgid "signup"

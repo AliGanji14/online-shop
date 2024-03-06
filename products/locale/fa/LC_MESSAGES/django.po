@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-05 21:40+0330\n"
-"PO-Revision-Date: 2024-03-05 19:30+0330\n"
+"POT-Creation-Date: 2024-03-06 12:56+0330\n"
+"PO-Revision-Date: 2024-03-06 12:57+0330\n"
 "Last-Translator:   <ali@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,31 +18,39 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\models.py:30
+#: .\models.py:13
+msgid "product image"
+msgstr "تصویر محصول"
+
+#: .\models.py:15
+msgid "date time of creation"
+msgstr "تاریخ زمان ایجاد"
+
+#: .\models.py:32
 msgid "Very Bad"
 msgstr "خیلی بد"
 
-#: .\models.py:31
+#: .\models.py:33
 msgid "Bad"
 msgstr "بد"
 
-#: .\models.py:32
+#: .\models.py:34
 msgid "Normal"
 msgstr "معمولی"
 
-#: .\models.py:33
+#: .\models.py:35
 msgid "Good"
 msgstr "خوب"
 
-#: .\models.py:34
+#: .\models.py:36
 msgid "Perfect"
 msgstr "عالی"
 
-#: .\models.py:43
+#: .\models.py:45
 msgid "Comment text"
 msgstr "متن دیدگاه"
 
-#: .\models.py:44
+#: .\models.py:46
 msgid "What is your stars?"
 msgstr "امتیاز شما به این محصول کدام است؟"
 

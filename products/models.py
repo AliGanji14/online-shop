@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth import get_user_model
@@ -9,9 +10,9 @@ class Product(models.Model):
     description = models.TextField()
     price = models.PositiveIntegerField(default=0)
     active = models.BooleanField(default=True)
-    image = models.ImageField(upload_to='product/product_cover/', verbose_name=_('product image'), blank=True, )
+    image = models.ImageField(_('product image'), upload_to='product/product_cover/', blank=True, )
 
-    datetime_created = models.DateTimeField(auto_now_add=True)
+    datetime_created = models.DateTimeField(_('date time of creation'), default=timezone.now)
     datetime_modified = models.DateTimeField(auto_now=True)
 
     def __str__(self):
