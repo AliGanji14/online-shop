@@ -1,4 +1,5 @@
 venv/
+staticfiles/
 .idea/
 *.pyc
 .env

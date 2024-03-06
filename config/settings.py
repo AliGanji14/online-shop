@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     # 3rd party
     'jalali_date',
+    'ckeditor',
     'allauth',
     'allauth.account',
     'crispy_forms',
@@ -153,6 +154,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 # Media
 MEDIA_URL = 'media/'
