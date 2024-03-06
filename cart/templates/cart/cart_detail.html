@@ -4,6 +4,8 @@
 {% load i18n %}
 {% load crispy_forms_tags %}
 {% load comment_tags %}
+{% load persian_translation_tags %}
+{% load humanize %}
 
 {% block content %}
     <div class="main-content-wrapper">
@@ -46,7 +48,7 @@
                                                     </td>
                                                     <td class="product-price">
                                                             <span class="product-price-wrapper">
-                                                                <span class="money">{{ item.product_obj.price }}</span>
+                                                                <span class="money">{{ item.product_obj.price|intcomma:False|translate_number }} {% trans '$' %}</span>
                                                             </span>
                                                     </td>
                                                     <td class="product-quantity">
@@ -72,7 +74,7 @@
                                                     </td>
                                                     <td class="product-total-price">
                                                             <span class="product-price-wrapper">
-                                                                <span class="money">{{ item.total_price }}</span>
+                                                                <span class="money">{{ item.total_price|intcomma:False|translate_number }} {% trans '$' %}</span>
                                                             </span>
                                                     </td>
                                                 </tr>
@@ -97,21 +99,13 @@
                             <div class="cart-totals">
                                 <h5 class="font-size-14 font-bold mb--15">مجموع</h5>
                                 <div class="cart-calculator">
-                                    {#                                    <div class="cart-calculator__item">#}
-                                    {#                                        <div class="cart-calculator__item--head">#}
-                                    {#                                            <span>مجموع</span>#}
-                                    {#                                        </div>#}
-                                    {#                                        <div class="cart-calculator__item--value">#}
-                                    {#                                            <span>۳۴۶,۰۰۰ تومان</span>#}
-                                    {#                                        </div>#}
-                                    {#                                    </div>#}
                                     <div class="cart-calculator__item order-total">
                                         <div class="cart-calculator__item--head">
                                             <span>جمع کل</span>
                                         </div>
                                         <div class="cart-calculator__item--value">
                                                 <span class="product-price-wrapper">
-                                                    <span class="money">{{ cart.get_total_price }} تومان</span>
+                                                    <span class="money">{{ cart.get_total_price|intcomma:False|translate_number }} {% trans '$' %}</span>
                                                 </span>
                                         </div>
                                     </div>
